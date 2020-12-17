@@ -1,0 +1,127 @@
+body {
+  color: #606060;
+}
+
+div {
+  cursor: default;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  font-size: 59px;
+  margin-bottom: 10px;
+}
+
+#players {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.active {
+    font-weight: bold;
+}
+
+#player_1 {
+  margin-right: 400px;
+}
+
+.play_field_all {
+    max-width: 700px;
+    padding: 50px 200px;
+    background-color: #A9A9A9;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+}
+
+.play_field_single {
+  width: 100px;
+  height: 100px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  color: white;
+}
+
+#f00 {
+  border-right: 7px solid #606060;
+  border-bottom: 7px solid #606060;
+}
+
+#f01 {
+  border-bottom: 7px solid #606060;
+}
+
+#f02 {
+  border-left: 7px solid #606060;
+  border-bottom: 7px solid #606060;
+}
+
+#f10 {
+  border-right: 7px solid #606060;
+}
+
+#f12 {
+  border-left: 7px solid #606060;
+}
+
+#f20 {
+  border-right: 7px solid #606060;
+  border-top: 7px solid #606060;
+}
+
+#f21 {
+  border-top: 7px solid #606060;
+}
+
+#f22 {
+  border-left: 7px solid #606060;
+  border-top: 7px solid #606060;
+}
+
+#win_result {
+  z-index: -1;
+  background-color: rgba(169, 169, 169, 0.88);
+  position: absolute;
+  width: 650px;
+  height: 350px;
+  margin-top: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 85px;
+  color: white;
+  font-weight: bold;
+}
+
+.new_game_btn {
+  margin-top: 20px;
+  font-size: 21px;
+  cursor: pointer;
+  padding-top: 10px;
+  margin-right: 390px;
+}
+
+select {
+  -webkit-appearance: none;
+  border: none;
+  color: #606060;
+  background-color: white;
+  font-size: 21px;
+  cursor: pointer;
+  width: 132px;
+  height: 50px;
+  outline: none;
+}
+
+#game_mode_selection {
+  margin-top: 20px;
+}

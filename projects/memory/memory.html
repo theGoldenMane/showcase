@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memory</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="Ressources/favicon/favicon.ico">
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<!-- Custom css -->
+<link rel="stylesheet" href="../../Ressources/css/memory.css">
+<!-- Script -->
+<script src="../../Ressources/js/jquery-3.4.1.min.js"></script>
+<script src="../../Ressources/js/memory.js"></script>
+
+<body onload="initiateGame()">
+  <div class="col-12">
+    <h1 id="main_headline">Memory</h1>
+    <div class="theme_switcher_container">
+      <h5 id="themes_headline">Themes</h5>
+      <div class="theme_colors">
+        <div id="light_theme" onclick="changeTheme('light')"></div>
+        <div id="dark_theme" onclick="changeTheme('dark')"></div>
+      </div>
+    </div>
+    <div id="playField" class="container">
+      <div class="row">
+        <div id="win_screen" class="win">
+          <p>Winner</p>
+          <p id="score" class="score"></p>
+          <button onclick="newGame()">New Game</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

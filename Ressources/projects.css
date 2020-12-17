@@ -1,0 +1,35 @@
+body {
+    font-family: 'Comfortaa', cursive;
+    background-color: #1B1B1B;
+    overflow: hidden;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 80px;
+	color: #FFF;
+}
+
+#gameContainer {
+	background-color: transparent !important;
+	width: 960px;
+	height: 540px;
+}
+
+.webgl-content {
+	display: flex;
+    justify-content: center;
+}
+
+a {
+	display: block;
+	color: white;
+	text-align: center;
+	margin-top: 80px;
+}
+
+a:hover {
+	color: white;
+	text-decoration: none;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic Tac Toe</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="Ressources/favicon/favicon.ico">
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- Custom css -->
+  <link rel="stylesheet" href="../../Ressources/css/tic-tac-toe.css">
+  <!-- Script -->
+  <script src="../../Ressources/js/tic-tac-toe.js"></script>
+</head>
+<body onload="initiateGame()">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <h1>Tic Tac Toe</h1>
+        </div>
+        <div id="players" class="container">
+          <div class="row">
+            <div id="player_1" class="active">Player X</div>
+            <div id="player_2">Player O</div>
+          </div>
+        </div>
+        <div class="container">
+          <div id="play_field" class="play_field_all">
+            <div id="f00" class="play_field_single" onClick="play(this.id)"></div>
+            <div id="f01" class="play_field_single" onclick="play(this.id)"></div>
+            <div id="f02" class="play_field_single" onclick="play(this.id)"></div>
+            <div id="f10" class="play_field_single" onclick="play(this.id)"></div>
+            <div id="f11" class="play_field_single" onclick="play(this.id)"></div>
+            <div id="f12" class="play_field_single" onclick="play(this.id)"></div>
+            <div id="f20" class="play_field_single" onclick="play(this.id)"></div>
+            <div id="f21" class="play_field_single" onclick="play(this.id)"></div>
+            <div id="f22" class="play_field_single" onclick="play(this.id)"></div>
+          </div>
+          <div id="win_result"></div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="new_game_btn" onClick="startNewGame()">New Game</div>
+            <select id="game_mode_selection" onchange="startNewGame()">
+              <option value="bot">Against Bot</option>
+              <option value="friend">Against Friend</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <a href="http://127.0.0.1/robocoon/index.html">Back</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
