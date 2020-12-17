@@ -1,19 +1,33 @@
 body {
-  color: #606060;
+  color: #FFF;
+  background-color: #1B1B1B;
+  font-family: 'Comfortaa', cursive;
+  overflow: hidden;
 }
 
 div {
   cursor: default;
 }
 
-.container {
-  display: flex;
-  justify-content: space-around;
+h1 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
 }
 
-h1 {
-  font-size: 59px;
-  margin-bottom: 10px;
+#players, .flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.selection {
+  padding: 0 30px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
 
 #players {
@@ -32,7 +46,7 @@ h1 {
 .play_field_all {
     max-width: 700px;
     padding: 50px 200px;
-    background-color: #A9A9A9;
+    background-color: #242424;
     border-radius: 10px;
     box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
 }
@@ -51,39 +65,43 @@ h1 {
 }
 
 #f00 {
-  border-right: 7px solid #606060;
-  border-bottom: 7px solid #606060;
+  border-right: 7px solid;
+  border-bottom: 7px solid;
 }
 
 #f01 {
-  border-bottom: 7px solid #606060;
+  border-bottom: 7px solid;
 }
 
 #f02 {
-  border-left: 7px solid #606060;
-  border-bottom: 7px solid #606060;
+  border-left: 7px solid;
+  border-bottom: 7px solid;
 }
 
 #f10 {
-  border-right: 7px solid #606060;
+  border-right: 7px solid;
 }
 
 #f12 {
-  border-left: 7px solid #606060;
+  border-left: 7px solid;
 }
 
 #f20 {
-  border-right: 7px solid #606060;
-  border-top: 7px solid #606060;
+  border-right: 7px solid;
+  border-top: 7px solid;
 }
 
 #f21 {
-  border-top: 7px solid #606060;
+  border-top: 7px solid;
 }
 
 #f22 {
-  border-left: 7px solid #606060;
-  border-top: 7px solid #606060;
+  border-left: 7px solid;
+  border-top: 7px solid;
+}
+
+#f00, #f01, #f02, #f10, #f12, #f20, #f21, #f22 {
+  border-color: #606060;
 }
 
 #win_result {
@@ -107,21 +125,32 @@ h1 {
   font-size: 21px;
   cursor: pointer;
   padding-top: 10px;
-  margin-right: 390px;
 }
 
 select {
   -webkit-appearance: none;
   border: none;
-  color: #606060;
-  background-color: white;
+  color: #FFF;
+  background-color: #1B1B1B;
   font-size: 21px;
   cursor: pointer;
-  width: 132px;
+  width: 165px;
   height: 50px;
   outline: none;
 }
 
 #game_mode_selection {
   margin-top: 20px;
+}
+
+a {
+  display: block;
+  color: #FFF;
+  text-align: center;
+  margin-top: 80px;
+}
+
+a:hover {
+  color: #FFF;
+  text-decoration: none;
 }

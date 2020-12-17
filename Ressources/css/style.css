@@ -78,7 +78,7 @@ a:hover {
 
 .project {
 	min-height: 290px;
-	border: 1px solid #FFF;
+	background-color: #242424;
 	border-radius: 5px;
 	padding: 10px;
 	margin-bottom: 30px;

@@ -19,45 +19,47 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="container">
-          <h1>Tic Tac Toe</h1>
-        </div>
-        <div id="players" class="container">
-          <div class="row">
-            <div id="player_1" class="active">Player X</div>
-            <div id="player_2">Player O</div>
-          </div>
-        </div>
-        <div class="container">
-          <div id="play_field" class="play_field_all">
-            <div id="f00" class="play_field_single" onClick="play(this.id)"></div>
-            <div id="f01" class="play_field_single" onclick="play(this.id)"></div>
-            <div id="f02" class="play_field_single" onclick="play(this.id)"></div>
-            <div id="f10" class="play_field_single" onclick="play(this.id)"></div>
-            <div id="f11" class="play_field_single" onclick="play(this.id)"></div>
-            <div id="f12" class="play_field_single" onclick="play(this.id)"></div>
-            <div id="f20" class="play_field_single" onclick="play(this.id)"></div>
-            <div id="f21" class="play_field_single" onclick="play(this.id)"></div>
-            <div id="f22" class="play_field_single" onclick="play(this.id)"></div>
-          </div>
-          <div id="win_result"></div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="new_game_btn" onClick="startNewGame()">New Game</div>
-            <select id="game_mode_selection" onchange="startNewGame()">
-              <option value="bot">Against Bot</option>
-              <option value="friend">Against Friend</option>
-            </select>
-          </div>
-        </div>
+        <h1>Tic Tac Toe</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-12">
-        <a href="http://127.0.0.1/robocoon/index.html">Back</a>
+      <div id="players" class="col-8  offset-2">
+        <div id="player_1" class="active">Player X</div>
+        <div id="player_2">Player O</div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-12 center">
+        <div id="play_field" class="play_field_all">
+          <div id="f00" class="play_field_single" onClick="play(this.id)"></div>
+          <div id="f01" class="play_field_single" onclick="play(this.id)"></div>
+          <div id="f02" class="play_field_single" onclick="play(this.id)"></div>
+          <div id="f10" class="play_field_single" onclick="play(this.id)"></div>
+          <div id="f11" class="play_field_single" onclick="play(this.id)"></div>
+          <div id="f12" class="play_field_single" onclick="play(this.id)"></div>
+          <div id="f20" class="play_field_single" onclick="play(this.id)"></div>
+          <div id="f21" class="play_field_single" onclick="play(this.id)"></div>
+          <div id="f22" class="play_field_single" onclick="play(this.id)"></div>
+        </div>
+        <div id="win_result"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 offset-2 selection flex">
+        <select id="game_mode_selection" onchange="startNewGame()">
+          <option value="bot">Against Bot</option>
+          <option value="friend">Against Friend</option>
+        </select>
+        <div class="new_game_btn " onClick="startNewGame()">New Game</div>
+      </div>
+    </div>
+    
   </div>
+  <div class="row">
+    <div class="col-12">
+      <a href="http://127.0.0.1/robocoon/index.html">Back</a>
+    </div>
+  </div>
+</div>
 </body>
 </html>

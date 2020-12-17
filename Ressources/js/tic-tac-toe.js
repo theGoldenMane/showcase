@@ -18,7 +18,6 @@ function initiateGame() {
   activePlayer = 'player_1';
 
   //Initialize play field
-  //TODO Change all to zero
   playField = [
     [0, 0, 0],
     [0, 0, 0],
@@ -228,6 +227,10 @@ function initiateGame() {
 }
 
 function play(fieldID) {
+  if(gameMode == 'bot') {
+    document.getElementById("play_field").style.pointerEvents = "none";
+  }
+
   //Get index/coordinates of clicked field
   row = fieldID.charAt(1);
   col = fieldID.charAt(2);
@@ -253,7 +256,6 @@ function play(fieldID) {
       changeToActivePlayer('player_2');
 
       //BOT
-      //TODO prevent click event while bot's turn
       //Only do bot move if there is no winner
       if (!winner) {
         symbol = 'O';
@@ -265,6 +267,7 @@ function play(fieldID) {
           drawSymbol(fieldID, row, col, symbol);
           checkWin();
           changeToActivePlayer('player_1');
+          document.getElementById("play_field").style.pointerEvents = "all";
         }, 1000);
       }
     }
@@ -342,9 +345,9 @@ function checkWin() {
 
 //Show new active Player with bold text highlight
 function changeToActivePlayer(newActive) {
-  var players = document.getElementById('players').children[0].children;
+  var players = document.getElementById('players').children;
   for (var i = 0; i < players.length; i++) {
-    document.getElementById(players[i].id).classList.remove("active");
+    document.getElementById(players.item(i).id).classList.remove("active");
   }
   document.getElementById(newActive).classList.add('active');
 }
@@ -373,18 +376,15 @@ function getBotField() {
     for (var j = 0; j < toCheck[i].length; j++) {
       var r = toCheck[i][j].r;
       var c = toCheck[i][j].c;
-      //console.log('Checking: ' + r + ', ' + c);
 
       if (playField[r][c] == 'O') {
         ctr += 1;
       }
 
       if (ctr == 2) {
-        //console.log('ctr == 2');
         for (var k = 0; k < toCheck[i].length; k++) {
           var r = toCheck[i][k].r;
           var c = toCheck[i][k].c;
-          //console.log('Check_2: ' + r + ', ' + c);
 
           for (var l = 0; l < 3; l++) {
             if (playField[r][c] == 0) {
@@ -406,18 +406,15 @@ function getBotField() {
     for (var j = 0; j < toCheck[i].length; j++) {
       var r = toCheck[i][j].r;
       var c = toCheck[i][j].c;
-      console.log('Checking: ' + r + ', ' + c);
 
       if (playField[r][c] == 'X') {
         ctr += 1;
       }
 
       if (ctr == 2) {
-        console.log('ctr == 2');
         for (var k = 0; k < toCheck[i].length; k++) {
           var r = toCheck[i][k].r;
           var c = toCheck[i][k].c;
-          console.log('Check_2: ' + r + ', ' + c);
 
           for (var l = 0; l < 3; l++) {
             if (playField[r][c] == 0) {
@@ -440,7 +437,6 @@ function getBotField() {
     for (var j = 0; j < playField.length; j++) {
       if (playField[i][j] == 'O') {
         for (var k = 0; k < adjacentFields[i][j].length; k++) {
-          console.log('AdjacentFields: ' + adjacentFields[i][j][k].r + ', ' + adjacentFields[i][j][k].c);
           if (playField[adjacentFields[i][j][k].r][adjacentFields[i][j][k].c] == '0') {
             return {
               r: adjacentFields[i][j][k].r,
@@ -490,7 +486,6 @@ function printArray(arr) {
     }
     output += '\n';
   }
-  console.log(output);
 }
 
 /**
@@ -501,12 +496,4 @@ function equals(n1, n2, n3) {
     return true;
   }
   return false;
-}
-
-
-//----------TESTING-------------------------------------------------------------
-function test() {
-
-
-
 }
