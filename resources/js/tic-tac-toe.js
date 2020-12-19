@@ -287,10 +287,14 @@ function startNewGame() {
   for (var i = 0; i < players.length; i++) {
     document.getElementById(players[i].id).classList.remove("active");
   }
+  activePlayer = 'player_1';
   document.getElementById(activePlayer).classList.add('active');
 
   //Hide win result
   winResultField.style.zIndex = '-1';
+
+  //Allow pointer events
+  document.getElementById("play_field").style.pointerEvents = "all";
 }
 
 /**
@@ -328,7 +332,7 @@ function checkWin() {
     winner = playField[1][2];
   } else if (!contains(playField, 0)) {
     //Tie if field is full and no one wins
-    winner = 'both'
+    winner = 'both';
   }
 
   if (winner) {
