@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Isabella Baum</title>
+		<title>Showcase</title>
 		<!--Favicon-->
 		<link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico">
 		<!-- Google fonts -->
@@ -13,16 +13,24 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 		<!-- Custom css -->
 		<link rel="stylesheet" href="resources/css/style.css">
+		<!-- Script -->
+		<script type="text/javascript" src="resources/js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="resources/js/p5.js"></script>
+		<script type="text/javascript" src="resources/js/main-img-background.js"></script>
+		<script type="text/javascript" src="resources/js/script.js"></script>
 	</head>
 	<body>
 		<div class="container">
-			<div class="row header">
-				<img src=""></img>
+			<div id="header" class="row header">
+				<div class="text">
+					<p class="name">Isabella Baum</p>
+					<p class="job">Web & software developer</p>
+				</div>
 			</div>
 			<div class="row about">
 				<div class="col-8 offset-2 info">
 					<h3>ABOUT ME</h3>
-					<p>I'm a web & software developer from Germany. I successfully completed my apprenticeship in 2020 as an IT specialist for application development.<br> I have a diverse set of skills, ranging from PHP, Javascript, HTML, CSS, all the way to Java and C#.</p>
+					<p>I'm a junior web & software developer from Germany. I successfully completed my apprenticeship in 2020 as an IT specialist for application development.<br> I have a diverse set of skills, ranging from PHP, Javascript, HTML, CSS, all the way to Java and C#.</p>
 				</div>
 			</div>
 			<div id="projects" class="row portfolio">
@@ -34,10 +42,15 @@
 						<div class="col-4">
 							<a href="projects/hyper-little/hyper-little.html">
 								<div class="project">
-									<img src="./resources/images/hyper_little.jpg">
-									<div>
-										<p class="name">Hyper Little</p>
-										<p class="type">Unity 2D</p>
+									<div class="overview">
+										<img class="teaser-img" src="./resources/images/hyper_little.jpg">
+										<div class="short-description">
+											<p class="name">Hyper Little</p>
+											<p class="type">Unity 2D</p>
+										</div>
+									</div>
+									<div class="description">
+										Hyper Little was a school project im my apprenticeship and my first Unity project. It is heavily inspired by the wonderful game Hyper Light Drifter made by Heart Machine.
 									</div>
 								</div>
 							</a>
@@ -45,10 +58,15 @@
 						<div class="col-4">
 							<a href="projects/techdemo/techdemo.html">
 								<div class="project">
-									<img src="./resources/images/techdemo.jpg">
-									<div>
-										<p class="name">Techdemo - Work in progress</p>
-										<p class="type">Unity 3D</p>
+									<div class="overview">
+										<img class="teaser-img" src="./resources/images/techdemo.jpg">
+										<div class="short-description">
+											<p class="name">Techdemo - Work in progress</p>
+											<p class="type">Unity 3D</p>
+										</div>
+									</div>
+									<div class="description">
+										After Hyper Little I wanted to move on to a 3D Unity project. In this techdemo I try to recreate different things I know from games I played, starting at the basics like walking, runnning and jumping to more advanced systems like inventory management (pick up, drop, move and stack).
 									</div>
 								</div>
 							</a>
@@ -56,10 +74,15 @@
 						<div class="col-4">
 							<a href="https://thegoldenmane.github.io/EasyShopping/" target="_blank">
 								<div class="project">
-									<img src="./resources/images/ez_shopping.jpg">
-									<div>
-										<p class="name">EZ Shopping</p>
-										<p class="type">Browser App</p>
+									<div class="overview">
+										<img class="teaser-img" src="./resources/images/ez_shopping.jpg">
+										<div class="short-description">
+											<p class="name">EZ Shopping</p>
+											<p class="type">Browser App</p>
+										</div>
+									</div>
+									<div class="description">
+										EZ Shopping is a browser app that should make my shopping life easier. I was tired of forgetting one little thing when I go shopping for groceries, so I built this app where I can add all my recipes and get a ready-made shopping list.
 									</div>
 								</div>
 							</a>
@@ -67,10 +90,15 @@
 						<div class="col-4">
 							<a href="projects/memory/memory.html">
 								<div class="project">
-									<img src="./resources/images/memory.jpg">
-									<div>
-										<p class="name">Memory</p>
-										<p class="type">Browser Game</p>
+									<div class="overview">
+										<img class="teaser-img" src="./resources/images/memory.jpg">
+										<div class="short-description">
+											<p class="name">Memory</p>
+											<p class="type">Browser Game</p>
+										</div>
+									</div>
+									<div class="description">
+										This is a Javascript based Browser game. It's memory, it's relaxing and trains your brain.
 									</div>
 								</div>
 							</a>
@@ -78,10 +106,15 @@
 						<div class="col-4">
 							<a href="projects/tic-tac-toe/tic-tac-toe.html">
 								<div class="project">
-									<img src="./resources/images/tic_tac_toe.jpg">
-									<div>
-										<p class="name">Tic Tac Toe</p>
-										<p class="type">Browser Game</p>
+									<div class="overview">
+										<img class="teaser-img" src="./resources/images/tic_tac_toe.jpg">
+										<div class="short-description">
+											<p class="name">Tic Tac Toe</p>
+											<p class="type">Browser Game</p>
+										</div>
+									</div>
+									<div class="description">
+										This is a jQuery based browser game. You can either play against a not-so-smart bot or locally against another person.
 									</div>
 								</div>
 							</a>

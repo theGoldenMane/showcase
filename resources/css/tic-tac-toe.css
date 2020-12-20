@@ -33,10 +33,15 @@ h1 {
 #players {
   font-size: 21px;
   margin-bottom: 20px;
+  color: #FFF;
+}
+
+#player_1, #player_2 {
+  opacity: 0.5;
 }
 
 .active {
-    font-weight: bold;
+  opacity: 1 !important;
 }
 
 #player_1 {

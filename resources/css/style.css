@@ -25,6 +25,22 @@ a:hover {
 	text-decoration: none !important;
 }
 
+#header .text {
+	position: absolute;
+    color: #FFF;
+    top: 250px;
+    left: 250px;
+}
+
+#header .name {
+	font-size: 128px;
+	font-weight: 700;
+}
+
+#header .job {
+	font-size: 35px;
+}
+
 .text-white {
 	color: #FFF;
 }
@@ -88,11 +104,19 @@ a:hover {
 	color: #FFF;
 }
 
+.description {
+	display: none;
+    color: #FFF;
+    padding: 10px;
+	line-height: 30px;
+	text-align: center;
+}
+
 .project img {
 	border-radius: 5px;
 }
 
-.project p {
+.short-description p {
 	margin: 0;
 	padding-top: 5px;
 }
@@ -103,10 +127,6 @@ a:hover {
 
 .project .type {
 	font-size: 14px;
-}
-
-.project:hover {
-	opacity: 0.6;
 }
 
 .footer {
